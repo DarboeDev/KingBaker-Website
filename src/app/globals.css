@@ -1,0 +1,276 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary-burgundy: #752428;
+  --secondary-burgundy: #320402;
+  --primary-gold: #996829;
+  --secondary-gold: #fff5cc;
+  --gray-light: #f5f5f5;
+  --gray-dark: #171717;
+  --gray-medium: #e0e0e0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+.nav-link {
+  color: var(--primary-burgundy);
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: var(--primary-gold);
+  transition: width 0.4s ease, right 0.4s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  right: 0;
+}
+.navbar {
+  /* background: linear-gradient(
+    135deg,
+    var(--primary-burgundy),
+    var(--secondary-burgundy)
+  ); */
+}
+.home-header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-burgundy),
+    var(--secondary-burgundy)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.home-text {
+  color: var(--primary-gold);
+}
+.btn-hero {
+  background-color: var(--primary-burgundy);
+  color: white;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.btn-hero:hover,
+.btn-hero:focus {
+  background-color: var(--secondary-burgundy);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.btn-hero:hover {
+  transform: translateY(-1px);
+}
+
+.btn-hero:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+.hero-banner {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary-burgundy);
+  color: white;
+}
+
+.card-container {
+  perspective: 150em;
+  width: 320px;
+  height: 420px;
+  margin: 20px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 20px;
+}
+
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card__side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card__side--front {
+  background-color: var(--background);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.card__side--front img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-burgundy);
+  padding: 10px 0;
+}
+
+.card__side--back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.card__side--back {
+  position: relative;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  overflow: hidden; /* Ensure the overlay stays within the card */
+  background: url("/hero-flip.png") no-repeat center center;
+  background-size: cover;
+}
+
+.card__side--back::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 1; /* Ensure the overlay is above the background but below the text */
+}
+
+.card__side--back .content {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.explore-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.explore-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.explore-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.card__side--back-2 .explore-button {
+  color: var(--foreground);
+  border-color: var(--foreground);
+}
+
+.explore-button:hover {
+  background-color: white;
+  color: black;
+}
