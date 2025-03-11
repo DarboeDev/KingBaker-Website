@@ -9,7 +9,7 @@ import SEO from "../components/SEO";
 
 const HomePage = () => {
   return (
-    <main className="flex flex-col w-full overflow-auto justify-center items-center mt-14 max-sm:mt-[10rem]">
+    <main className="flex flex-col w-full overflow-auto justify-center items-center pt-14 max-sm:pt-[10rem]">
       <SEO
         title={"King Bakers"}
         description={"Delicious baked goods, groceries, and a cozy cafe."}
