@@ -3,7 +3,7 @@ import { MapPin, Phone } from "lucide-react";
 
 const VisitUs = () => {
   return (
-    <section className="py-20 px-6 bg-[#FFF7F0] text-center">
+    <section className="py-20 w-full px-6 bg-[#FFF7F0] text-center">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-4xl font-bold text-[#752428] mb-6">
           Visit Our Bakery 🍞
