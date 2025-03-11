@@ -4,11 +4,11 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="navbar px-9 py-3 bg-white fixed w-full z-10 top-0 flex justify-between items-center">
+    <nav className="navbar max-sm:px-4 max-sm:mb-9 px-12 pt-4 py-3 bg-white fixed w-full z-10 top-0 flex justify-between items-center">
       <button>
-        <Image src="/logo.png" alt="Logo" width={120} height={120} />
+        <Image src="/logo.png" alt="Logo" width={90} height={90} />
       </button>
-      <ul className="flex space-x-6 font-medium max-sm:hidden">
+      <ul className="flex justify-center items-center gap-14 text-lg font-medium max-sm:hidden">
         <li>
           <Link href="#home">
             <span className="nav-link relative mb-1">Home</span>
@@ -42,9 +42,9 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link href="#contact">
-            <span className="nav-link relative mb-1">Contact</span>
-          </Link>
+          <button className="bg-[#996829] text-white px-5 py-2 rounded-lg font-medium hover:bg-[#7a5520] transition">
+            <span className="relative mb-1 text-white">Contact Us</span>
+          </button>
         </li>
       </ul>
 
