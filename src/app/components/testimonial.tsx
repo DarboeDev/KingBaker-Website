@@ -87,7 +87,7 @@ const Testimonials = () => {
             {[...testimonials, ...testimonials].map((testimonial, index) => (
               <div
                 key={index}
-                className="p-6 bg-white rounded-2xl shadow-lg flex flex-col items-center text-center max-sm:w-[270px] max-sm:h-[270px] max-w-[350px]"
+                className="p-6 bg-white rounded-2xl custom-shadow flex flex-col items-center text-center max-sm:w-[270px] max-sm:h-[270px] max-w-[350px]"
               >
                 <img
                   src={testimonial.image}

@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 const ServicesCards = () => {
   const services = [
     {
@@ -12,7 +12,7 @@ const ServicesCards = () => {
     {
       title: "Supermarket",
       description:
-        "Find a wide variety of groceries, fresh produce, and household essentials at unbeatable prices.",
+        "Find a wide variety of groceries and household essentials at unbeatable prices.",
       backDescription: "Your one-stop shop for all essentials!",
       image: "/supermarket.jpg",
     },
@@ -34,18 +34,23 @@ const ServicesCards = () => {
           <div key={index} className="card-container">
             <div className="card">
               <div className="card__side card__side--front">
-                <img
+                <Image
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-64 object-cover rounded-t-2xl"
+                  width={500}
+                  height={240}
+                  className="w-full h-60 object-cover rounded-t-2xl"
                 />
-                <div className="flex flex-col items-center justify-center px-4 pb-4 bg-white rounded-b-2xl shadow-lg w-full">
+                <div className="flex flex-col items-center justify-center px-4 pb-4 max-sm:pb-6 bg-white rounded-b-2xl shadow-lg w-full h-full">
                   <h2 className="text-2xl font-bold text-[#752428] mt-4">
                     {service.title}
                   </h2>
-                  <p className="text-lg font-light text-center mt-2 mb-1 text-gray-700">
+                  <p className="text-lg font-light text-center mt-2 mb-2 text-gray-700">
                     {service.description}
                   </p>
+                  <button className="bg-[#996829] text-2xl px-2 mb-4 py-1 rounded text-white hidden max-sm:block">
+                    Explore More
+                  </button>
                 </div>
               </div>
               <div className={`card__side card__side--back`}>

@@ -13,7 +13,7 @@ const VisitUs = () => {
         </p>
 
         {/* Map + Info Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col md:flex-row items-center">
+        <div className="bg-white rounded-2xl custom-shadow p-6 flex flex-col md:flex-row items-center">
           {/* Google Maps */}
           <div className="w-full md:w-1/2 mb-6 md:mb-0">
             <iframe
