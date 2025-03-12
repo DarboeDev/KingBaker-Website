@@ -26,7 +26,9 @@ const ServicesCards = () => {
   ];
   return (
     <div className="flex flex-col items-center justify-center pt-12">
-      <h1 className="home-header text-4xl font-bold mb-4">Our Services</h1>
+      <h1 className="home-header text-4xl max-sm:text-3xl font-bold mb-4">
+        Our Services
+      </h1>
       <div className="px-4 flex max-sm:flex-col items-center gap-7 justify-between">
         {services.map((service, index) => (
           <div key={index} className="card-container">

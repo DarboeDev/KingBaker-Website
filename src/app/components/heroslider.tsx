@@ -13,7 +13,7 @@ const HeroSlider = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen max-sm:h-[450px] flex items-center justify-center overflow-hidden">
+    <div className="w-full mb-5 h-screen max-sm:h-[300px] max-sm:pb-4 flex items-center justify-center overflow-auto">
       <AnimatePresence>
         <motion.img
           key={heroImages[index]}
@@ -21,7 +21,7 @@ const HeroSlider = () => {
           alt="Hero Image"
           width={400}
           height={400}
-          className="mt-8 absolute object-cover"
+          className="mt-8 max-sm:w-[200px] max-sm:h-[200px] absolute object-cover"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

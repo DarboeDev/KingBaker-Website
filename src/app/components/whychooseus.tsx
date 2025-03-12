@@ -28,7 +28,7 @@ const WhyChooseUs = () => {
       style={{ backgroundImage: "url('/bakery-bg.jpg')" }}
     >
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold text-[#752428] mb-8">
+        <h2 className="text-4xl max-sm:text-3xl font-bold text-[#752428] mb-8">
           Why Choose King Bakers?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

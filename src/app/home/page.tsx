@@ -9,7 +9,7 @@ import SEO from "../components/SEO";
 
 const HomePage = () => {
   return (
-    <main className="flex flex-col w-full overflow-auto justify-center items-center pt-14 max-sm:pt-[10rem]">
+    <main className="flex flex-col w-full min-h-screen overflow-auto justify-center items-center pt-14 max-sm:pt-[7.5rem]">
       <SEO
         title={"King Bakers"}
         description={"Delicious baked goods, groceries, and a cozy cafe."}
@@ -17,7 +17,7 @@ const HomePage = () => {
       />
       <div className="h-screen flex items-center justify-center">
         <div className="container mx-auto max-sm:flex-col max-sm:mt-9 max-sm:pt-5 px-4 flex items-center justify-between">
-          <div className="flex flex-col items-start justify-center">
+          <div className="flex flex-col items-start max-sm:text-center max-sm:items-center justify-center">
             <h1 className="home-header text-5xl font-bold mb-4">
               Welcome to King Baker – Taste the Difference!
             </h1>

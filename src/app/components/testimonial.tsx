@@ -63,19 +63,19 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-20 px-6 bg-gray-100 overflow-hidden">
+    <section className="py-20 px-6 w-full bg-gray-100 overflow-hidden">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold text-[#752428] mb-8">
+        <h2 className="text-4xl max-sm:text-3xl font-bold text-[#752428] mb-8">
           Loved by Thousands of Customers! ❤️
         </h2>
-        <p className="text-lg text-gray-600 mb-12">
+        <p className="text-lg text-center text-gray-600 mb-12">
           See what our happy customers have to say about King Bakers!
         </p>
 
         {/* Scrolling Wrapper */}
         <div className="relative w-full overflow-hidden">
           <motion.div
-            className="flex space-x-8 w-max"
+            className="flex gap-3 max-sm:gap-6 w-max"
             animate={{ x: ["0%", "-100%"] }}
             transition={{
               repeat: Infinity,
@@ -87,7 +87,7 @@ const Testimonials = () => {
             {[...testimonials, ...testimonials].map((testimonial, index) => (
               <div
                 key={index}
-                className="p-6 bg-white rounded-2xl shadow-lg flex flex-col items-center text-center min-w-[300px] max-w-[350px]"
+                className="p-6 bg-white rounded-2xl shadow-lg flex flex-col items-center text-center max-sm:w-[270px] max-sm:h-[270px] max-w-[350px]"
               >
                 <img
                   src={testimonial.image}

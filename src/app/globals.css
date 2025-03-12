@@ -112,6 +112,12 @@ body {
   vertical-align: baseline;
   width: auto;
 }
+@media (max-width: 768px) {
+  .btn-hero {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
 
 .btn-hero:hover,
 .btn-hero:focus {
