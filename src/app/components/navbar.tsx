@@ -48,7 +48,7 @@ const Navbar = () => {
           </button>
         </li>
       </ul>
-      <Menu size={30} className="max-sm:block text-black" />
+      <Menu size={30} className="max-sm:block hidden text-black" />
       <style jsx>{`
         .nav-link {
           text-decoration: none;
