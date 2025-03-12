@@ -25,7 +25,17 @@
     --foreground: #ededed;
   }
 }
-
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+p,
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
 body {
   background: var(--background);
   color: var(--foreground);
