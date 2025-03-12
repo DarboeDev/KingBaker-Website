@@ -79,8 +79,8 @@ const Testimonials = () => {
             animate={{ x: ["0%", "-100%"] }}
             transition={{
               repeat: Infinity,
-              duration: 100,
-              ease: "easeInOut",
+              duration: 80,
+              ease: "linear",
             }}
           >
             {/* Duplicate testimonials for seamless looping */}

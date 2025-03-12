@@ -45,7 +45,7 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4">Contact Us</h3>
             <p>Address: C749+JVQ, Brufut, Gambia</p>
             <p>Phone: +220 3733094</p>
-            <p>Email: info@kingbakers.com</p>
+            <p>Email: kingbakers@yahoo.com</p>
           </div>
 
           {/* Social Media */}
